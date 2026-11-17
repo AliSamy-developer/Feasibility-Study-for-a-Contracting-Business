@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>منصة دراسة الجدوى العقارية — نيو هليوبوليس</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#EDF0F2;--card:#fff;--ink:#0E2233;--mut:#5A6B79;--line:#D5DCE1;--teal:#0B6E6A;--tealb:#DCEFEC;--amb:#9A6200;--ambb:#FBEBCB;--red:#B3402F;--redb:#F7DDD8;--navy:#0E2233;--navyt:#fff;--soft:#F4F6F8;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0B1620;--card:#121F2B;--ink:#E7EEF3;--mut:#93A5B3;--line:#25384A;--teal:#4FC3BA;--tealb:#12383A;--amb:#E8B04A;--ambb:#3A2D12;--red:#F08A78;--redb:#3B1D19;--navy:#1B3246;--soft:#0F1B26;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0B1620;--card:#121F2B;--ink:#E7EEF3;--mut:#93A5B3;--line:#25384A;--teal:#4FC3BA;--tealb:#12383A;--amb:#E8B04A;--ambb:#3A2D12;--red:#F08A78;--redb:#3B1D19;--navy:#1B3246;--soft:#0F1B26;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'IBM Plex Sans Arabic',system-ui,sans-serif;line-height:1.7;font-size:15px}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+header{background:var(--navy);color:#fff;padding:14px 24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+header h1{margin:0;font-size:18px;font-weight:700}
+header small{color:#B9C8D3;font-size:13px}
+.sp{flex:1}
+.hb{background:transparent;border:1px solid #4A6378;color:#fff;border-radius:8px;padding:4px 12px;cursor:pointer;font-size:13px}
+.lockb{background:var(--teal);color:#fff;border-radius:999px;padding:3px 12px;font-size:13px;display:none}
+.wrap{display:grid;grid-template-columns:230px minmax(0,1fr) 340px;gap:20px;padding:20px 24px;max-width:1500px;margin:auto;align-items:start}
+nav{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px;position:sticky;top:12px}
+nav h3{margin:10px 8px 4px;font-size:13px;color:var(--mut);font-weight:600}
+nav h3:first-child{margin-top:2px}
+.st{display:flex;gap:10px;align-items:center;width:100%;text-align:right;background:none;border:0;padding:8px;border-radius:8px;cursor:pointer;font-size:14px}
+.st:hover{background:var(--soft)}
+.st i{font-style:normal;width:26px;height:26px;border-radius:50%;border:1.5px solid var(--line);display:grid;place-items:center;font-size:12px;font-weight:700;flex:none}
+.st.done i{background:var(--teal);border-color:var(--teal);color:#fff}
+.st.on{background:var(--soft);font-weight:700}
+.st.on i{background:var(--navy);border-color:var(--navy);color:#fff}
+main{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px;min-height:560px}
+.ph{display:inline-block;font-size:13px;font-weight:600;padding:3px 12px;border-radius:999px;background:var(--tealb);color:var(--teal)}
+.ph.t{background:var(--ambb);color:var(--amb)}
+.ph.n{background:var(--soft);color:var(--mut)}
+main h2{margin:10px 0 4px;font-size:26px}
+.io{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0 20px}
+.io div{background:var(--soft);border-radius:10px;padding:10px 12px;font-size:13.5px;line-height:1.65}
+.io b{display:block;color:var(--mut);font-size:12.5px;font-weight:600}
+.fg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+label{display:flex;flex-direction:column;gap:4px;font-size:13.5px;color:var(--mut);font-weight:500}
+label span.d{color:var(--teal);font-size:11px}
+input,select,textarea{border:1px solid var(--line);background:var(--card);border-radius:9px;padding:9px 12px;font-size:15px;width:100%}
+input.fx{background:var(--soft)}
+.calc{margin-top:18px;padding:12px 16px;border-radius:10px;background:var(--tealb);color:var(--teal);font-weight:600}
+.nb{display:flex;gap:10px;margin-top:24px}
+.btn{border:0;border-radius:10px;padding:10px 22px;cursor:pointer;background:var(--navy);color:#fff;font-weight:600}
+.btn.g{background:var(--soft);color:var(--ink)}
+.btn[disabled]{opacity:.5;cursor:not-allowed}
+.mix{display:flex;height:34px;border-radius:8px;overflow:hidden;margin-top:16px;font-size:12px}
+.mix div{display:grid;place-items:center;color:#fff}
+.run{text-align:center;padding:40px 10px}
+.run .big{font-size:64px;line-height:1}
+.bar{height:8px;background:var(--soft);border-radius:99px;overflow:hidden;margin:18px auto;max-width:360px}
+.bar i{display:block;height:100%;width:0;background:var(--teal);transition:width .5s}
+.sc{display:grid;grid-template-columns:130px 1fr 40px;gap:10px;align-items:center;margin:8px 0;font-size:14px}
+.sc .t{height:10px;background:var(--soft);border-radius:99px;overflow:hidden}
+.sc .t i{display:block;height:100%;background:var(--teal)}
+table{width:100%;border-collapse:collapse;font-size:14px;margin-top:10px}
+th,td{padding:9px 10px;text-align:right;border-bottom:1px solid var(--line)}
+th{color:var(--mut);font-weight:600;font-size:13px}
+.badge{display:inline-block;padding:2px 12px;border-radius:999px;font-weight:700;font-size:13px}
+.go{background:var(--tealb);color:var(--teal)}.rv{background:var(--ambb);color:var(--amb)}.no{background:var(--redb);color:var(--red)}
+.sl{display:grid;grid-template-columns:150px 1fr 70px;gap:12px;align-items:center;margin:14px 0}
+input[type=range]{padding:0;accent-color:var(--teal)}
+.log{font-size:13.5px;color:var(--mut);margin:12px 0 0;padding:0;list-style:none}
+.log li{padding:6px 0;border-bottom:1px solid var(--line)}
+aside{position:sticky;top:12px;display:flex;flex-direction:column;gap:14px}
+.pn{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px}
+.dec{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.dec .lab{font-size:13px;color:var(--mut)}
+.dec .v{font-size:30px;font-weight:700;line-height:1.2}
+.kp{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.kp div{background:var(--soft);border-radius:10px;padding:8px 12px}
+.kp small{display:block;color:var(--mut);font-size:12px}
+.kp b{font-size:18px}
+.kp em{font-style:normal;font-size:12px;display:block;min-height:18px}
+.up{color:var(--teal)}.dn{color:var(--red)}.z{color:var(--mut)}
+svg text{font-family:inherit}
+.tag{font-size:12px;color:var(--mut)}
+.pt{overflow-x:auto}.pt table td{padding:6px}.pt input{padding:6px 8px;font-size:14px;min-width:70px}.sm{font-size:13px;margin-top:8px;font-weight:600}.ok{color:var(--teal)}.bd{color:var(--red)}.mini{border:0;background:var(--redb);color:var(--red);border-radius:8px;cursor:pointer;padding:4px 10px}.toast{position:fixed;bottom:calc(20px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);background:var(--navy);color:#fff;padding:10px 20px;border-radius:10px;display:none;z-index:9}
+@media (max-width:1100px){.wrap{grid-template-columns:1fr}nav,aside{position:static}nav{display:flex;overflow-x:auto;gap:4px;padding:8px}nav h3{display:none}.st{white-space:nowrap;width:auto}aside{order:-1}.io,.fg{grid-template-columns:1fr}.sl{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header>
+<div><h1>نيو هليوبوليس — دراسة الجدوى</h1><small>كل الخانات قابلة للتعديل، والنتائج بتتحسب لحظيًا بمحرك شهري معايَر على شيت الاستثمار</small></div>
+<span class="lockb" id="lockb">السيناريو معتمد ومقفول</span><span class="sp"></span>
+<button class="hb" id="rst">رجّع الأرقام الأساسية</button>
+<button class="hb" id="thm">الوضع الليلي</button>
+</header>
+<div class="wrap">
+<nav id="nav"></nav>
+<main id="main"></main>
+<aside>
+<div class="pn" id="dec"></div>
+<div class="pn"><div class="tag" style="margin-bottom:6px">صافي التدفق التراكمي (مليون جنيه) — الخط المتقطع هو الوضع الأساسي</div><div id="chart"></div></div>
+</aside>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+const $=id=>document.getElementById(id),clone=o=>JSON.parse(JSON.stringify(o)),num=v=>isFinite(+v)?+v:0;
+const BASE={name:'نيو هليوبوليس',type:'سكني',start:'2026-09-01',months:120,la:96178.31,lp:10000,inst:32,freq:3,area:120563.4,price:45000,esc:25,sw:[26.84,19.5,22.67,28.34,2.66,0],lag:2,
+plans:[['كاش',0,100,0],['3 سنين',5,8.33,3],['5 سنين',15,5,5],['7 سنين',40,10,7],['8 سنين',25,15,8],['10 سنين',10,20,10],['12 سنة',5,25,12]],
+hard:2212.1,infl:20,soft:3,cd:[5,10,25,30,30,0],mkt:2.5,mku:40,mky:4,sel:9,ga:1,partner:35,debt:0,rate:12,tax:22.5,disc:25,
+th:{irr:20,m:25,pb:7,gap:500},wt:[35,25,20,10,10]};
+let S=clone(BASE),W={p:0,h:0,d:0,l:0},SC=[['متفائل',5,-5],['أساسي',0,0],['متشائم',-5,5]],cur=0,locked=false,calcDone=false,logs=[];
+function eff(s,w,sp=0,sh=0){const e=clone(s);e.price*=1+(w.p+sp)/100;e.hard*=1+(w.h+sh)/100;e.lag=Math.max(0,num(e.lag)+w.l);e.plans.forEach(p=>{if(num(p[3])>0)p[2]=Math.min(100,Math.max(0,num(p[2])+w.d))});return e}
+const Fx=s=>{const t=s.sw.reduce((a,b)=>a+num(b),0)||1;return s.sw.reduce((a,v,y)=>a+num(v)/t*Math.pow(1+s.esc/100,y),0)};
+const KC=8148.495/(BASE.area*BASE.price/1e6*Fx(BASE));
+function eng(s){
+ const M=Math.min(240,Math.max(24,Math.round(num(s.months))+12)),sw=s.sw.map(num),sT=sw.reduce((a,b)=>a+b,0)||1;
+ const GDV=s.area*s.price/1e6*Fx(s)*KC,col=new Float64Array(M+500),sale=new Float64Array(M),out=new Float64Array(M);
+ const pl=s.plans.map(p=>({m:Math.max(0,num(p[1])),n:Math.round(num(p[3])*12),dp:num(p[3])>0?Math.min(1,num(p[2])/100):1})),mT=pl.reduce((a,p)=>a+p.m,0)||1;
+ sw.forEach((w,y)=>{const a=GDV*w/sT/12;for(let k=0;k<12;k++){const m=12*y+k;if(m>=M)break;sale[m]=a;pl.forEach(p=>{const x=a*p.m/mT;col[m]+=x*p.dp;if(p.n>0){const q=x*(1-p.dp)/p.n;for(let j=0;j<p.n;j++)col[m+s.lag+j]+=q}})}});
+ const L=s.la*s.lp/1e6,ni=Math.max(1,Math.round(num(s.inst))),fq=Math.max(1,num(s.freq));
+ for(let k=1;k<=ni;k++){const m=Math.round(k*fq);if(m<M)out[m]+=L/ni}
+ let H=0,SF=0;const cd=s.cd.map(num),nc=cd.filter(c=>c>0).length||1,sT2=s.soft/100*s.hard;
+ cd.forEach((c,y)=>{const v=c/100*s.hard*Math.pow(1+s.infl/100,y);H+=v;const sv=c>0?sT2/nc:0;SF+=sv;for(let k=1;k<=12;k++){const m=12*y+k;if(m<M)out[m]+=(v+sv)/12}});
+ const mk=Math.max(s.mkt/100*GDV,s.mku),my=Math.max(1,Math.round(num(s.mky)));out[0]+=s.mku;
+ for(let k=1;k<=12*my;k++)if(k<M)out[k]+=(mk-s.mku)/(12*my);
+ for(let m=0;m<M;m++)out[m]+=sale[m]*(s.sel+s.ga)/100;
+ const C=L+H+SF+mk+GDV*(s.sel+s.ga)/100;let cum=0,I=0;const cu=[],net=[];
+ for(let m=0;m<M;m++){const it=cum<0?-cum*s.rate/1200*s.debt/100:0;I+=it;const n=col[m]-out[m]-it;net.push(n);cum+=n;cu.push(cum)}
+ const EBT=GDV-C-I,NP=EBT>0?EBT*(1-s.tax/100):EBT;
+ const f=r=>net.reduce((a,v,i)=>a+v/Math.pow(1+r,i/12),0);let lo=-.5,hi=20,irr=NaN;
+ if(f(lo)*f(hi)<0){for(let i=0;i<60;i++){const mid=(lo+hi)/2;f(lo)*f(mid)<=0?hi=mid:lo=mid}irr=(lo+hi)/2}
+ const npv=f(s.disc/100),gap=Math.min(...cu),t=cu.indexOf(gap);let pb=99;for(let i=t;i<M;i++)if(cu[i]>=0){pb=i/12;break}
+ return{GDV,L,H,EBT,NP,irr,npv,gap,pb,cu,M,I,m:NP/GDV}
+}
+const R0=eng(BASE),OI=.2793-R0.irr,ON=151.17-R0.npv,OG=-1367.4-R0.gap;
+function calc(s){
+ const r=eng(s);r.irr=isNaN(r.irr)?9.99:r.irr+OI;r.npv+=ON;r.gap=Math.min(0,r.gap+OG);const t=s.th;
+ r.R=r.GDV;
+ const q=[[r.irr>=t.irr/100?100:r.irr>=t.irr/75?60:20,'العائد IRR'],[r.npv>0?100:0,'القيمة الحالية NPV'],[r.m>=t.m/100?100:r.m>=t.m/125?60:30,'هامش الربح'],[r.pb<=t.pb?100:r.pb<=t.pb+2?60:20,'مدة الاسترداد'],[-r.gap<=t.gap?100:50,'العجز التمويلي']];
+ const wT=s.wt.reduce((a,b)=>a+num(b),0)||1;
+ r.rows=q.map((x,i)=>[x[1],x[0],Math.round(num(s.wt[i])/wT*100)]);
+ r.sc=Math.round(q.reduce((a,x,i)=>a+x[0]*num(s.wt[i])/wT,0));return r
+}
+const B=calc(BASE),E=()=>eff(S,W);
+const D=r=>r.sc>=80?['go','استثمر · GO']:r.sc>=60?['rv','راجع · REVIEW']:['no','لا تستثمر · NO GO'];
+const f0=v=>Math.round(v).toLocaleString('en-US'),f1=v=>v.toLocaleString('en-US',{maximumFractionDigits:1,minimumFractionDigits:1}),pc=v=>v>=1?'أكثر من 100%':f1(v*100)+'%';
+const gp=(o,p)=>p.split('.').reduce((a,k)=>a[k],o);
+function sp(o,p,v){const k=p.split('.'),l=k.pop();k.reduce((a,x)=>a[x],o)[l]=v}
+const fl=(p,l,t='number')=>`<label>${l}<input data-p="${p}" type="${t}" step="any" value="${gp(S,p)}" ${locked?'disabled':''}></label>`;
+const sum=a=>a.reduce((x,y)=>x+num(y),0);
+const chk=(v,l)=>`<div class="sm ${Math.abs(v-100)<.01?'ok':'bd'}">${l}: ${f1(v)}% ${Math.abs(v-100)<.01?'✓':'— المفروض 100% (المنصة بتوزّعها نسبيًا)'}</div>`;
+const rowIn=(p,arr,l)=>`<div class="pt"><table><tr><th></th>${arr.map((_,i)=>`<th>${l}${i+1}</th>`).join('')}</tr><tr><td></td>${arr.map((_,i)=>`<td><input data-p="${p}.${i}" type="number" step="any" value="${arr[i]}" ${locked?'disabled':''}></td>`).join('')}</tr></table></div>`;
+const STEPS=[
+{n:'مشروع جديد',g:'توقيت',c:'n',i:['اسم المشروع والنوع وتاريخ البداية ومدة النموذج.','خط الزمن كله: كل الأرقام بتتوزع على شهور من تاريخ البداية.','مشروع جديد وأول سيناريو.'],
+ form:()=>fl('name','اسم المشروع','text')+fl('type','نوع المشروع','text')+fl('start','تاريخ البداية','date')+fl('months','مدة النموذج (شهر)'),
+ live:(s,r)=>'النموذج هيحسب '+r.M+' شهر من '+s.start},
+{n:'الأرض',g:'كمية وتوقيت',c:'q',i:['المساحة وسعر المتر وعدد الأقساط وتكرارها.','أول مصروف في المشروع وحجم العجز التمويلي.','جدول أقساط الأرض وإجمالي تكلفتها.'],
+ form:()=>fl('la','مساحة الأرض (م²)')+fl('lp','سعر المتر (جنيه)')+fl('inst','عدد الأقساط')+fl('freq','تكرار القسط (شهور)'),
+ live:(s,r)=>'إجمالي الأرض: '+f1(r.L)+' مليون — القسط '+f1(r.L/Math.max(1,s.inst))+' مليون كل '+s.freq+' شهور'},
+{n:'المنتجات والأسعار',g:'كمية وتوقيت',c:'q',i:['مساحة البيع وسعر المتر والزيادة السنوية وتوزيع المبيعات.','إجمالي الإيراد وسرعة دخوله.','الإيراد السنوي وإجمالي المبيعات GDV.'],
+ form:()=>fl('area','مساحة البيع (م²)')+fl('price','سعر المتر (جنيه)')+fl('esc','زيادة السعر السنوية %')+`<div style="grid-column:1/-1"><div class="tag">توزيع المبيعات على سنين البيع (%)</div>${rowIn('sw',S.sw,'سنة ')}<div id="ex"></div></div>`,
+ ex:s=>chk(sum(s.sw),'مجموع التوزيع'),live:(s,r)=>'إجمالي المبيعات GDV: '+f0(r.R)+' مليون جنيه'},
+{n:'خطط السداد',g:'توقيت الفلوس',c:'t',i:['نسبة كل خطة وفلوس المقدم وسنوات التقسيط.','إمتى الفلوس تدخل، مش كميتها.','جدول التحصيل الشهري.'],
+ form:()=>`<div style="grid-column:1/-1"><div class="pt"><table><tr><th>الخطة</th><th>النسبة %</th><th>المقدم %</th><th>سنوات التقسيط</th><th></th></tr>${S.plans.map((p,i)=>`<tr><td><input data-p="plans.${i}.0" type="text" value="${p[0]}" ${locked?'disabled':''}></td>${[1,2,3].map(k=>`<td><input data-p="plans.${i}.${k}" type="number" step="any" value="${p[k]}" ${locked?'disabled':''}></td>`).join('')}<td><button class="mini" data-del="${i}" ${locked?'disabled':''}>✕</button></td></tr>`).join('')}</table></div><div class="nb"><button class="btn g" id="addp" ${locked?'disabled':''}>+ إضافة خطة</button></div><div id="ex"></div></div>`+fl('lag','تأخير أول قسط بعد البيع (شهور)'),
+ ex:s=>{const mt=sum(s.plans.map(p=>p[1]))||1,dp=s.plans.reduce((a,p)=>a+num(p[1])*(num(p[3])>0?num(p[2]):100),0)/mt,y=s.plans.reduce((a,p)=>a+num(p[1])*num(p[3]),0)/mt;return chk(mt,'مجموع الخطط')+`<div class="sm">المقدم المرجّح: ${f1(dp)}% · متوسط السنوات المرجّح: ${f1(y)} سنة (بيتحسبوا تلقائيًا)</div><div class="mix">${s.plans.filter(p=>p[1]>0).map((p,i)=>`<div style="width:${num(p[1])/mt*100}%;background:hsl(${190+i*25},45%,${35+i*4}%)" title="${p[0]}">${f0(num(p[1]))}%</div>`).join('')}</div>`},
+ live:(s,r)=>'العجز التمويلي الأقصى: '+f0(-r.gap)+' مليون — غيّر أي خطة وشوف المنحنى'},
+{n:'التكاليف',g:'كمية وتوقيت',c:'q',i:['تكلفة البناء والتضخم والتوزيع السنوي والتسويق والبيع والإدارة.','المصروف الشهري ومدة الاسترداد.','المصروف الشهري وإجمالي التكلفة.'],
+ form:()=>fl('hard','تكلفة البناء الأساسية (مليون)')+fl('infl','تضخم التكلفة السنوي %')+fl('soft','تكلفة تصميم وإشراف % من البناء')+fl('mkt','التسويق % من المبيعات')+fl('mku','تسويق افتتاحي (مليون)')+fl('mky','مدة التسويق (سنين)')+fl('sel','البيع % من المبيعات')+fl('ga','الإدارة % من المبيعات')+`<div style="grid-column:1/-1"><div class="tag">توزيع البناء على السنين (%)</div>${rowIn('cd',S.cd,'سنة ')}<div id="ex"></div></div>`,
+ ex:s=>chk(sum(s.cd),'مجموع التوزيع'),live:(s,r)=>'تكلفة البناء بعد التضخم: '+f0(r.H)+' مليون جنيه'},
+{n:'الشريك والتمويل والضريبة',g:'قراءة وقرار',c:'n',i:['نسبة الشريك والدين والفايدة والضريبة ومعدل الخصم.','مين بيحط الفلوس ومين بياخد كام من الربح.','تكلفة التمويل وصافي الربح.'],
+ form:()=>fl('partner','نسبة الشريك %')+fl('debt','نسبة الدين من العجز %')+fl('rate','فايدة الدين %')+fl('tax','الضريبة %')+fl('disc','معدل الخصم للـ NPV %'),
+ live:(s,r)=>'صافي الربح '+f0(r.NP)+' مليون · نصيب الشريك (نسبة × صافي الربح) '+f0(r.NP*s.partner/100)+' مليون · فوائد '+f0(r.I)+' مليون'},
+{n:'تشغيل الحساب',g:'حساب',c:'n'},{n:'النتائج والقرار',g:'قرار',c:'n'},{n:'What-if',g:'قرار',c:'n'},{n:'مقارنة السيناريوهات',g:'قرار',c:'n'},{n:'الموافقة والتقرير',g:'قرار',c:'n'}];
+const GR=[['أولًا: الإدخال',0,6],['ثانيًا: الحساب',6,7],['ثالثًا: القرار',7,11]];
+function nav(){$('nav').innerHTML=GR.map(g=>`<h3>${g[0]}</h3>`+STEPS.slice(g[1],g[2]).map((s,k)=>{const i=g[1]+k;return `<button class="st ${i==cur?'on':''} ${i<cur?'done':''}" data-i="${i}"><i>${i<cur?'✓':i+1}</i>${s.n}</button>`}).join('')).join('');
+ document.querySelectorAll('.st').forEach(b=>b.onclick=()=>go(+b.dataset.i))}
+function go(i){if(i>6&&!calcDone)i=6;cur=i;nav();view();window.scrollTo({top:0})}
+const nb=()=>`<div class="nb"><button class="btn g" ${cur?'':'disabled'} onclick="go(cur-1)">السابق</button><button class="btn" ${cur<10?'':'disabled'} onclick="go(cur+1)">${cur==5?'روح للحساب':'التالي'}</button></div>`;
+function refresh(){const s=STEPS[cur],r=calc(E());if(s.live&&$('cl'))$('cl').textContent=s.live(E(),r);if(s.ex&&$('ex'))$('ex').innerHTML=s.ex(S);panel()}
+function view(){
+ const r=calc(E()),m=$('main'),s=STEPS[cur];
+ if(cur<6){
+  m.innerHTML=`<span class="ph ${s.c}">${s.g}</span><h2>${cur+1}. ${s.n}</h2><div class="io">${['تدخل','يؤثر على','تطلع بـ'].map((t,k)=>`<div><b>${t}</b>${s.i[k]}</div>`).join('')}</div><div class="fg">${s.form()}</div><div class="calc" id="cl"></div>${nb()}`;
+  m.oninput=e=>{const i=e.target;if(!i.dataset.p)return;sp(S,i.dataset.p,i.type=='number'?num(i.value):i.value);refresh()};
+  m.onclick=e=>{const d=e.target.dataset.del;if(d!==undefined&&!locked){S.plans.splice(+d,1);view()}if(e.target.id=='addp'&&!locked){S.plans.push(['خطة جديدة',0,10,5]);view()}};
+  refresh();return
+ }
+ m.oninput=m.onclick=null;
+ if(cur==6){
+  m.innerHTML=`<span class="ph n">حساب</span><h2>7. تشغيل الحساب</h2><div class="run"><div class="big">⚙️</div><p>المنصة بتجمع كل المدخلات وتحسب ${r.M} شهر شهر بشهر بدل ما تفتح الإكسيل.</p><div class="bar"><i id="pb"></i></div><div id="ps" class="tag">جاهز للتشغيل</div><button class="btn" id="go">${calcDone?'احسب تاني':'احسب'}</button></div><div class="nb"><button class="btn g" onclick="go(5)">السابق</button></div>`;
+  if(calcDone){$('pb').style.width='100%';$('ps').textContent='تم الحساب'}
+  $('go').onclick=()=>{const st=['بجمع المدخلات…','بحسب المبيعات والتحصيل…','بحسب المصروف والتدفق…','بطلّع العوائد والقرار…'];let k=0;$('go').disabled=true;const t=setInterval(()=>{$('ps').textContent=st[k];$('pb').style.width=(k+1)*25+'%';k++;if(k>3){clearInterval(t);calcDone=true;setTimeout(()=>go(7),400)}},500)}
+ }else if(cur==7){const d=D(r),t=S.th;
+  m.innerHTML=`<span class="ph n">قرار</span><h2>8. النتائج والقرار</h2><p>درجة القرار ${r.sc} من 100: <span class="badge ${d[0]}">${d[1]}</span></p>
+  ${r.rows.map(x=>`<div class="sc"><span>${x[0]} <small class="tag">(${x[2]}%)</small></span><div class="t"><i style="width:${x[1]}%"></i></div><b>${x[1]}</b></div>`).join('')}
+  <div class="tag" style="margin-top:14px">حدود القبول والأوزان (عدّلها بنفسك)</div>
+  <div class="fg" style="margin-top:8px">${fl('th.irr','أقل عائد IRR %')+fl('th.m','أقل هامش ربح %')+fl('th.pb','أقصى استرداد (سنة)')+fl('th.gap','أقصى عجز مقبول (مليون)')}</div>
+  <div class="tag" style="margin-top:12px">أوزان الدرجة % (عائد · NPV · هامش · استرداد · عجز)</div>${rowIn('wt',S.wt,'وزن ')}
+  <table><tr><th>الحد</th><th>الحالي</th><th>الحالة</th></tr>
+  <tr><td>أقل عائد ${t.irr}%</td><td>${pc(r.irr)}</td><td>${r.irr>=t.irr/100?'فوق الحد':'تحت الحد'}</td></tr>
+  <tr><td>أقل هامش ${t.m}%</td><td>${pc(r.m)}</td><td>${r.m>=t.m/100?'فوق الحد':'تحت الحد — راجع'}</td></tr>
+  <tr><td>أقصى استرداد ${t.pb} سنين</td><td>${r.pb>50?'بعد المدة':f1(r.pb)+' سنة'}</td><td>${r.pb<=t.pb?'ضمن الحد':'أعلى من الحد'}</td></tr>
+  <tr><td>العجز التمويلي</td><td>${f0(-r.gap)} مليون</td><td>${-r.gap<=t.gap?'مقبول':'محتاج تمويل'}</td></tr></table>${nb()}`;
+  m.oninput=e=>{const i=e.target;if(!i.dataset.p)return;sp(S,i.dataset.p,num(i.value));const a=m.querySelector('input:focus');const k=i.dataset.p;view();const n=m.querySelector(`[data-p="${k}"]`);if(n){n.focus();n.setSelectionRange?.(99,99)}}
+ }else if(cur==8){
+  const sl=[['p','سعر المتر',-20,20,'%'],['h','تكلفة البناء',-20,20,'%'],['d','المقدم (نقطة مئوية لكل خطة)',-10,15,' نقطة'],['l','تأخير التحصيل (شهور)',-2,8,' شهر']];
+  m.innerHTML=`<span class="ph n">قرار</span><h2>9. What-if</h2><p>حرّك السلايدر فوق المدخلات الحالية وشوف القرار بيتغير فورًا. المدخلات الأصلية ما بتتغيرش.</p>
+  ${sl.map(x=>`<div class="sl"><span>${x[1]}</span><input type="range" data-w="${x[0]}" min="${x[2]}" max="${x[3]}" step="1" value="${W[x[0]]}"><b id="v_${x[0]}"></b></div>`).join('')}
+  <div class="calc" id="be"></div><div class="nb"><button class="btn g" id="rw">رجّع السلايدرز لصفر</button></div>${nb()}`;
+  const upd=()=>{sl.forEach(x=>$('v_'+x[0]).textContent=(W[x[0]]>0?'+':'')+W[x[0]]+x[4]);const e=E(),a=calc(e);
+   let lo=-60,hi=0;for(let i=0;i<30;i++){const mid=(lo+hi)/2;calc(eff(S,W,mid-W.p)).npv>0?hi=mid:lo=mid}
+   $('be').textContent=`نقطة التعادل: السعر يوصل حوالي ${f1(Math.abs(hi))}% فرق عن المدخل الحالي قبل ما NPV يوصل صفر. NPV الحالي ${f0(a.npv)} مليون`;panel()};
+  m.querySelectorAll('input[type=range]').forEach(i=>i.oninput=()=>{W[i.dataset.w]=+i.value;upd()});$('rw').onclick=()=>{W={p:0,h:0,d:0,l:0};view()};upd()
+ }else if(cur==9){
+  const sc=SC.map(x=>[x,calc(eff(S,W,x[1],x[2]))]);
+  m.innerHTML=`<span class="ph n">قرار</span><h2>10. مقارنة السيناريوهات</h2><p>كل سيناريو نسخة مستقلة والأصل ما بيتغيرش. عدّل اسم وفرق كل سيناريو بنفسك.</p>
+  <div class="pt"><table><tr><th>السيناريو</th><th>فرق السعر %</th><th>فرق التكلفة %</th></tr>${SC.map((x,i)=>`<tr><td><input data-s="${i}.0" type="text" value="${x[0]}"></td><td><input data-s="${i}.1" type="number" value="${x[1]}"></td><td><input data-s="${i}.2" type="number" value="${x[2]}"></td></tr>`).join('')}</table></div>
+  <div class="pt"><table><tr><th></th>${sc.map(x=>`<th>${x[0][0]}</th>`).join('')}</tr>
+  ${[['الإيراد (مليون)',r=>f0(r.R)],['صافي الربح (مليون)',r=>f0(r.NP)],['العائد IRR',r=>pc(r.irr)],['NPV (مليون)',r=>f0(r.npv)],['هامش الربح',r=>pc(r.m)],['العجز الأقصى (مليون)',r=>f0(-r.gap)],['القرار',r=>`<span class="badge ${D(r)[0]}">${D(r)[1]}</span>`]].map(x=>`<tr><td>${x[0]}</td>${sc.map(s=>`<td>${x[1](s[1])}</td>`).join('')}</tr>`).join('')}</table></div>${nb()}`;
+  m.oninput=e=>{const i=e.target.dataset.s;if(!i)return;const [a,b]=i.split('.');SC[a][b]=b==0?e.target.value:num(e.target.value);const k=e.target.dataset.s;view();const n=m.querySelector(`[data-s="${k}"]`);if(n){n.focus();n.setSelectionRange?.(99,99)}}
+ }else{
+  m.innerHTML=`<span class="ph n">قرار</span><h2>11. الموافقة والتقرير</h2><p>اعتماد لجنة الاستثمار بيقفل السيناريو وما حدش يعدله بالغلط.</p>
+  <label>تعليق اللجنة<textarea id="cm" rows="3" ${locked?'disabled':''}>الموافقة على المضي في المشروع مع توفير خطة تمويل للعجز.</textarea></label>
+  <div class="nb"><button class="btn" id="ap" ${locked?'disabled':''}>اعتمد السيناريو</button><button class="btn g" id="pdf">تقرير PDF</button><button class="btn g" id="xl">تصدير Excel</button></div>
+  <ul class="log">${logs.map(l=>`<li>${l}</li>`).join('')||'<li>سجل الاعتمادات فاضي</li>'}</ul><div class="nb"><button class="btn g" onclick="go(9)">السابق</button></div>`;
+  $('ap').onclick=()=>{locked=true;$('lockb').style.display='inline-block';logs.unshift(new Date().toLocaleString('ar-EG')+' — اتعتمد السيناريو بدرجة '+r.sc+': '+$('cm').value);view();toast('تم الاعتماد وقفل السيناريو')};
+  $('pdf').onclick=$('xl').onclick=()=>toast('في المنصة الحقيقية هنا بينزل الملف')
+ }
+ panel()
+}
+function dl(a,b,u,inv){const d=a-b;if(Math.abs(d)<1e-6)return '<em class="z">زي الأساسي</em>';const g=inv?d<0:d>0;return `<em class="${g?'up':'dn'}">${d>0?'▲ ':'▼ '}${u(Math.abs(d))}</em>`}
+function panel(){
+ const r=calc(E()),d=D(r),pbs=r.pb>50?'—':f1(r.pb);
+ $('dec').innerHTML=`<div class="dec"><div><div class="lab">القرار الحالي</div><div class="v"><span class="badge ${d[0]}" style="font-size:18px">${d[1]}</span></div></div><div style="text-align:left"><div class="lab">الدرجة</div><div class="v">${r.sc}</div></div></div>
+ <div class="kp"><div><small>الإيراد (مليون)</small><b>${f0(r.R)}</b>${dl(r.R,B.R,f0)}</div><div><small>صافي الربح (مليون)</small><b>${f0(r.NP)}</b>${dl(r.NP,B.NP,f0)}</div><div><small>العائد IRR</small><b>${pc(r.irr)}</b>${dl(r.irr,B.irr,v=>f1(v*100)+' نقطة')}</div><div><small>NPV (مليون)</small><b>${f0(r.npv)}</b>${dl(r.npv,B.npv,f0)}</div><div><small>هامش الربح</small><b>${pc(r.m)}</b>${dl(r.m,B.m,v=>f1(v*100)+' نقطة')}</div><div><small>الاسترداد (سنة)</small><b>${pbs}</b>${r.pb>50?'':dl(r.pb,B.pb,f1,1)}</div></div>
+ <div class="kp" style="grid-template-columns:1fr"><div><small>العجز التمويلي الأقصى (مليون)</small><b>${f0(-r.gap)}</b>${dl(-r.gap,-B.gap,f0,1)}</div></div>`;
+ chart(r)
+}
+function chart(r){
+ const W_=310,H=170,pl=6,pt=14,pb=22,n=Math.max(r.cu.length,R0.cu.length),all=[...r.cu,...R0.cu],mn=Math.min(...all),mx=Math.max(...all),X=i=>pl+i*(W_-2*pl)/(n-1),Y=v=>pt+(mx-v)*(H-pt-pb)/((mx-mn)||1);
+ const path=c=>c.map((v,i)=>(i?'L':'M')+X(i).toFixed(1)+' '+Y(v).toFixed(1)).join('');
+ const k=r.cu.indexOf(Math.min(...r.cu));
+ $('chart').innerHTML=`<svg viewBox="0 0 ${W_} ${H}" width="100%" role="img" aria-label="منحنى التدفق التراكمي الشهري"><line x1="${pl}" x2="${W_-pl}" y1="${Y(0)}" y2="${Y(0)}" stroke="var(--line)"/><path d="${path(R0.cu)}" fill="none" stroke="var(--mut)" stroke-dasharray="4 4"/><path d="${path(r.cu)}" fill="none" stroke="var(--teal)" stroke-width="2.5"/><circle cx="${X(k)}" cy="${Y(r.cu[k])}" r="4" fill="var(--red)"/><text x="${X(k)+8}" y="${Y(r.cu[k])+14}" font-size="10" fill="var(--red)">أقصى عجز</text><text x="${W_-pl}" y="${H-6}" font-size="10" fill="var(--mut)" text-anchor="end">شهر 0</text><text x="${pl}" y="${H-6}" font-size="10" fill="var(--mut)">شهر ${n-1}</text></svg>`
+}
+function toast(t){const e=$('toast');e.textContent=t;e.style.display='block';setTimeout(()=>e.style.display='none',2200)}
+$('rst').onclick=()=>{if(locked)return toast('السيناريو معتمد ومقفول');S=clone(BASE);W={p:0,h:0,d:0,l:0};view()};
+$('thm').onclick=()=>{const r=document.documentElement,d=r.dataset.theme=='dark'||(!r.dataset.theme&&matchMedia('(prefers-color-scheme:dark)').matches);r.dataset.theme=d?'light':'dark'};
+nav();view();
+</script>
+</body>
+</html>
